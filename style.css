@@ -1,0 +1,27 @@
+
+body {
+	text-align: center;
+}
+
+
+table{
+	height:30em;
+	width:30em;
+	border-spacing: 0px;
+	margin: auto;
+}
+
+tr {
+	height:33.3%;
+	width:33.3%;
+}
+
+td {
+	height:33.3%;
+	width:33.3%;
+	border:solid black;
+}
+
+td:hover {
+	background-color:purple;
+}

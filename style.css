@@ -20,6 +20,8 @@ td {
 	height:33.3%;
 	width:33.3%;
 	border:solid black;
+	font-size: 8em;
+	font-family: arial, sans-serif;
 }
 
 td:hover {

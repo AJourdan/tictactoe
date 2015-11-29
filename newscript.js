@@ -1,38 +1,22 @@
-$(document).on('ready', function() {
-	var player1 = "player1";
-	var player2 = "player2";
-	var turn = "player1";
-	var winningCombo = [
-	[1,2,3],[4,5,6],[7,8,9],
-
-	[3,5,7],[1,5,9],[1,4,7],
-
-	[2,5,8],[3,6,9]
-	];
+$(document).ready(function() {
 
 
+	var winningCombo = [[1,2,3],[4,5,6],[7,8,9],[3,5,7],[1,5,9],[1,4,7],[2,5,8],[3,6,9]];
+	var turn = 1;
 
 
-
-	var turns = function() {
-		if (turn === "player1") { 	
-		$(this).text('X');
-			turn = "player2"
+	$('td').on('click', function() {
+		if (turn % 2 == 0) {
+			$(this).text("O");
 		} else {
-
-		$(this).text('O');	
-			turn = "player1"
+			$(this).text('X');
 		}
+	    $(this).off('click');
+		turn ++;
+	});
 
-	};
-
-	$('td').on('click', turns);
 
 
-	var winner = function() {
-		$('td').off('click');
-		window.alert('winner');
-	}
 
 
 
@@ -59,6 +43,5 @@ $(document).on('ready', function() {
 	$('td').on('click', checkForWinner);
 
 
-
-
 });
+
